@@ -6,17 +6,17 @@
         {{ description }}
       </p>
       <p class="card-text">Weight: {{ mass.kg }} KG</p>
-      <Button @btn-click="$emit('schedule-launch')" text="Schedule Launch" />
+      <CustomButtonComponent @btn-click="$emit('schedule-launch')" text="Schedule Launch" />
     </div>
   </div>
 </template>
 
 <script>
-import Button from "./Button.vue";
+import CustomButtonComponent from "./CustomButton.vue";
 export default {
   name: "CardComponent",
   components: {
-    Button,
+    CustomButtonComponent,
   },
   emits: ["schedule-launch"],
   props: {

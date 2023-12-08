@@ -1,7 +1,7 @@
 <template>
   <div class="rockets-container">
     <h1>Rockets</h1>
-    <Button
+    <CustomButtonComponent
       v-show="!rockets.length"
       @btn-click="$emit('fetch-rockets')"
       text="Load Rockets"
@@ -16,7 +16,7 @@
 
 <script>
 import RocketDetailsComponent from "./RocketDetailsComponent.vue";
-import Button from "./Button.vue";
+import CustomButtonComponent from "./CustomButton.vue";
 export default {
   name: "RocketsComponent",
   props: {
@@ -25,7 +25,7 @@ export default {
   emits: ["fetch-rockets"],
   components: {
     RocketDetailsComponent,
-    Button,
+    CustomButtonComponent,
   },
   created() {
     console.log(this.rockets, "my rockets");

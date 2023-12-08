@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "ButtonComponent",
+  name: "CustomButtonComponent",
   props: {
     text: {
       type: String,

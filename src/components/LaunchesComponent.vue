@@ -5,7 +5,7 @@
     <ol>
       <li :key="launch.id" v-for="launch in launches">
         {{ launch.name }} | Weight: {{ launch.mass.kg }} kg
-        <Button
+        <CustomButtonComponent
             text="X"
             className="mr-2"
         />
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
+import CustomButtonComponent from "./CustomButton";
 export default {
   name: "LaunchesComponent",
   props: {
     launches: Array,
   },
   components: {
-    Button,
+    CustomButtonComponent,
   },
   emits: ["remove-launch"],
 };
