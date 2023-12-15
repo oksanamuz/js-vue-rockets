@@ -37,14 +37,13 @@ export default {
     },
 
     removeLaunch(id) {
-      this.launches = this.launches.filter(({ id: currId }) => id !== currId);
+      console.log(id);
+      this.launches = [];
     },
 
     // Schedule a launch if it doesn't already exist in the launches array
     scheduleLaunch(rocket) {
-      if (!this.launches.some((launch) => launch.id === rocket.id)) {
-        this.launches = [...this.launches, rocket];
-      }
+      this.launches = [...this.launches, rocket];
     },
   },
   components: {

@@ -30,5 +30,6 @@ export default {
 <style scoped>
   .rocketdetails {
     transform: rotate(-180deg);
+    text-transform: revert;
   }
 </style>
